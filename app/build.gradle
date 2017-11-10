@@ -38,7 +38,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
-
+//Create report
 task fullCoverageReport(type: JacocoReport) {
     dependsOn 'createDebugCoverageReport'
     dependsOn 'testDebugUnitTest'
@@ -46,7 +46,8 @@ task fullCoverageReport(type: JacocoReport) {
         xml.enabled = true
         html.enabled = true
     }
-
+//-------
+    //setting by yourself in lastest patch
     def fileFilter = ['**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*',
                       '**/*Test*.*', 'android/**/*.*',
                       '**/*_MembersInjector.class',
